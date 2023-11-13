@@ -28,9 +28,8 @@ public class Bench {
 			Process p = rt.exec(new String[]{"bash", "-c", "echo $(expr `ps -o rss= -p " + pid() + "` / 1024) MB"});
 			byte[] bo = new byte[100];
 			p.getInputStream().read(bo);
-			System.out.println(new String(bo));
+			System.out.print(new String(bo));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -55,9 +54,6 @@ public class Bench {
 	private static CompactCharSequence makeCSV() {
 		CompactCharSequence[][] data = Stream.generate(() -> Stream.generate(() -> new CompactCharSequence(Integer.toString(++count) + xx)).limit(num_cols).toArray(CompactCharSequence[]::new)).limit(num_rows).toArray(CompactCharSequence[][]::new);
     	System.out.println(Integer.toString(count));
-    	rss();
-    	System.gc();
-    	rss();
     	CompactCharSequence csv = new CompactCharSequence(String.join("\n", Arrays.stream(data).map(row -> new CompactCharSequence(String.join(",", row))).toArray(CompactCharSequence[]::new)));
 
     	rss();
@@ -99,7 +95,7 @@ public class Bench {
     	return csv;
 	}
 	*/
-	public static void main(String[] args) {
+	public static void main2() {
 		long timeBegin = new Date().getTime();
 
 		xx = multiply_string("x", 1000);
@@ -115,4 +111,8 @@ public class Bench {
 		System.out.println("real time = " + String.format( "%.2f", (timeEnd - timeBegin)/1000.0) + "s");
 	}
 
+	public static void main(String[] args) {
+		main2();
+		main2();
+	}
 }

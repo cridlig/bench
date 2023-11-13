@@ -90,6 +90,12 @@ namespace Bench
         
         public static void Main(string[] args)
         {
+                Main2();
+                Main2();
+        }
+
+        public static void Main2()
+        {
             DateTime startDate = DateTime.Now;
             //xx = multiply_string("x", 1000);
             var sb = new StringBuilder();
