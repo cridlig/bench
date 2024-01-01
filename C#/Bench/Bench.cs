@@ -87,14 +87,8 @@ namespace Bench
                 rss();
                 return csv;
         }
-        
-        public static void Main(string[] args)
-        {
-                Main2();
-                Main2();
-        }
 
-        public static void Main2()
+        public static void Main(string[] args)
         {
             DateTime startDate = DateTime.Now;
             //xx = multiply_string("x", 1000);
