@@ -93,13 +93,11 @@ namespace Bench
             DateTime startDate = DateTime.Now;
             //xx = multiply_string("x", 1000);
             var sb = new StringBuilder();
-            for(int i=0; i<  1000; i++)
+            for(int i=0; i < 1000; i++)
             {
                 sb.Append('X');
             }
             xx = sb.ToString();
-
-            rss();
 
             for (int i = 1;i<=10;i++)
             {
