@@ -8,3 +8,6 @@ C++/bench.dSYM/Contents/Resources/DWARF/bench
 C++/bench.dSYM/Contents/Resources/Relocations/aarch64/bench.yml
 ~$bench.xlsx
 package_config.json
+
+.fake
+pubspec.lock

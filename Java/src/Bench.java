@@ -95,7 +95,7 @@ public class Bench {
     	return csv;
 	}
 	*/
-	public static void main2() {
+	public static void main(String[] args) {
 		long timeBegin = new Date().getTime();
 
 		xx = multiply_string("x", 1000);
@@ -109,10 +109,5 @@ public class Bench {
 
 		long timeEnd = new Date().getTime();
 		System.out.println("real time = " + String.format( "%.2f", (timeEnd - timeBegin)/1000.0) + "s");
-	}
-
-	public static void main(String[] args) {
-		main2();
-		main2();
 	}
 }
